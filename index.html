@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DW3 Remastered · Códice Supremo</title>
+  <meta name="description" content="Guía interactiva no oficial de Dynasty Warriors 3: Complete Edition Remastered: oficiales, armas 4ª y 5ª, ítems, orbes, caballos, guardias, secretos, logros y forjador de builds.">
+  <meta name="theme-color" content="#120c0a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#app">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#/"><span class="brand-seal" aria-hidden="true">無雙</span><span class="brand-text">DW3 Remastered<small>Códice Supremo</small></span></a>
+    <button id="menu" class="menu-btn" aria-label="Abrir menú">☰</button>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#/personajes">Oficiales</a>
+      <a href="#/armas">Armas</a>
+      <a href="#/items">Ítems</a>
+      <a href="#/orbes">Elementos y poderes</a>
+      <a href="#/caballos">Caballos y guardias</a>
+      <a href="#/etapas">Etapas</a>
+      <a href="#/logros">Logros</a>
+      <a href="#/secretos">Secretos</a>
+      <a href="#/forja" class="hot">Forja</a>
+      <a href="#/combos" class="hot">Combinaciones</a>
+      <a href="#/galeria">Galería</a>
+      <a href="#/prompt">Prompt</a>
+    </nav>
+    <form id="search" class="search" role="search"><input type="search" placeholder="Buscar en todo el códice…" aria-label="Buscar en toda la guía"></form>
+  </header>
+
+  <main id="app" tabindex="-1"><div class="loading">Desplegando el ejército…</div></main>
+
+  <div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-label="Detalle">
+    <div class="modal-card"><button id="modal-close" class="modal-close" aria-label="Cerrar">✕</button><div id="modal-body"></div></div>
+  </div>
+  <div id="tip" class="tip" hidden role="tooltip"></div>
+  <div id="toast" class="toast" hidden role="status"></div>
+
+  <footer class="footer">
+    <p>Guía hecha por fans, sin afiliación con KOEI TECMO ni Omega Force. <i>DYNASTY WARRIORS</i> es marca de KOEI TECMO GAMES. Todas las ilustraciones son originales y generadas por código; los datos citan sus fuentes en cada ficha. Los datos marcados «PS2 · por confirmar» vienen del juego original.</p>
+    <p><a href="#/prompt">Prompt Supremo y fuentes</a></p>
+  </footer>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
