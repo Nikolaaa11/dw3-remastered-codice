@@ -209,7 +209,7 @@ function charDetail(id) {
     <div class="detail-info">
       <h2>${esc(c.name)}</h2>
       <div class="card-meta">${kPill(c.kingdom)}${pill(c.weapon_type)}${c.starter ? `<span class="tag ok">Inicial</span>` : `<span class="tag lock">Desbloqueable</span>`}${c.xl_story ? `<span class="tag">Historia XL</span>` : ""}${c.new_in_remaster ? `<span class="tag gold">Nuevo en el remaster</span>` : ""}${verifiedTag(c)}</div>
-      <div class="callout"><b>Cómo desbloquear:</b> ${esc(c.unlock || "Sin datos")}</div>
+      <div class="callout"><b>Cómo desbloquear:</b> ${esc(c.unlock || "Sin datos")}${c.unlock_cross_checked ? ` <span class="tag ok" title="La condición coincide en al menos dos fuentes">✓ 2+ fuentes</span>` : ""}</div>
       ${c.playstyle ? `<p>${esc(c.playstyle)}</p>` : ""}
       ${c.musou ? `<p><b>Musou:</b> ${esc(c.musou)}</p>` : ""}
       <div class="grid-2 tight">
@@ -221,6 +221,7 @@ function charDetail(id) {
       <div class="weapon-row">${weapons.map((w) => `<div class="wcell">${Art.weaponSVG(c.weapon_type, { tier: w.t, name: w.name || "", kingdom: c.kingdom, element: w.element })}<b>${w.t}ª</b><span>${esc(w.name || "—")}</span></div>`).join("")}</div>
       ${special.map((w) => `<div class="callout ${w.tier === 5 ? "fire" : ""}"><b>${w.tier}ª arma · ${esc(w.weapon || "")}</b>${w.attack ? ` · ATK ${esc(w.attack)}` : ""}${ELEMENT_ES[`${w.element || ""}`.toLowerCase()] ? ` · ${ELEMENT_ES[`${w.element}`.toLowerCase()]}` : ""} — ${esc(w.stage || "?")} (${esc(w.side || "?")}, ${esc(w.difficulty || (w.tier === 5 ? "Chaos" : "Hard+"))})<br>${esc(w.condition || "")}${w.location ? `<br><i>Ubicación:</i> ${esc(w.location)}` : ""}</div>`).join("")}
       ${c.voice_or_trivia ? `<p class="muted"><i>${esc(c.voice_or_trivia)}</i></p>` : ""}
+      ${arr(c.notes).length ? `<details class="sources"><summary>Notas de la investigación</summary><ul>${arr(c.notes).map((x) => `<li>${esc(x)}</li>`).join("")}</ul></details>` : ""}
       <div class="cta"><a class="btn primary" href="#/forja?c=${esc(c.id)}">Forjar build con ${esc(c.name)}</a>${dlBtn("char", c.id)}
         <label class="check"><input type="checkbox" data-prog="chars" data-id="${esc(c.id)}" ${isDone("chars", c.id) ? "checked" : ""}> Ya lo desbloqueé</label></div>
       ${sourcesHTML(c.sources)}

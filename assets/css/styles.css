@@ -351,3 +351,18 @@ details.sources ul { padding-left: 18px; margin: 6px 0; word-break: break-all; }
 @media (max-width: 640px) { .footer { padding: 16px; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media (forced-colors: active) { .seg-bonus { background-image: repeating-linear-gradient(45deg, CanvasText 0 2px, transparent 2px 6px); } }
+
+/* ---------- Ajustes móviles ---------- */
+@media (max-width: 640px) {
+  .search { flex-basis: 100%; order: 4; }
+  .nav { order: 3; }
+  .sec-head { align-items: flex-start; gap: 12px; }
+  .sec-hanzi { font-size: 2rem; padding: 4px 9px; }
+  .objectives { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .obj { grid-template-columns: 26px 1fr; padding: 8px; }
+  .obj svg { width: 26px; height: 26px; }
+  .obj span { display: none; }
+  .obj b { font-size: .85rem; }
+  .tiles { grid-template-columns: repeat(3, 1fr); }
+  .tile-n { font-size: 1.5rem; }
+}

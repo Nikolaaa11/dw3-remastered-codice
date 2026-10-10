@@ -76,7 +76,7 @@ export function weaponKind(type = "", name = "") {
     [/twin (sword|sabre|saber|blade)s?|dual sword|espadas gemelas/, "twinswords"],
     [/serpent|viper|snake|serpiente/, "serpent"],
     [/halberd|\bji\b|alabarda/, "halberd"],
-    [/glaive|guan dao|crescent|\bblade\b|pole.?arm|podao|cuchilla/, "glaive"],
+    [/glaive|guan dao|crescent|\bblade\b|pole.?arm|podao|cuchilla|voulge/, "glaive"],
     [/trident|spear|lance|lanza|pike/, "spear"],
     [/dancing fans?|twin fans?|\bfans\b|abanicos/, "fans"],
     [/feather fan|\bfan\b|abanico/, "fan"],
@@ -93,6 +93,7 @@ export function weaponKind(type = "", name = "") {
     [/\bbow\b|\barco\b/, "bow"],
     [/boomerang|knife|knives|cuchillos|throwing/, "boomerang"],
     [/nodachi|long sword|longsword|katana|great sword|espad[oó]n/, "longsword"],
+    [/big sword/, "broadsword"],
     [/broadsword|sabre|saber|\bdao\b|scimitar|sable|cleaver/, "broadsword"],
     [/sword|espada/, "sword"],
   ];
